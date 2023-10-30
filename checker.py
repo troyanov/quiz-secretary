@@ -36,6 +36,6 @@ with open(filename, "r+") as f:
         r = requests.post(
             url=f"https://api.telegram.org/bot{token}/sendMessage",
             data={"chat_id": chat_id, "text": msg},
-        ).json()
+        )
         print(f"Sending message: HTTP {r.status_code}")
         f.write(game + "\n")
